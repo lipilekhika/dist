@@ -96,11 +96,7 @@ class लिपिलेखिकासहायक {
     };
     this.elms = [];
     this.pUrNasarve = this.alph[0] + this.alph[1] + "01234567890'$.#?";
-    this.git = (x) =>
-      $lf.getScript(
-        `https://github.com/lipilekhika/dist/releases/download/jala/${x}.js`
-      );
-    this.git("su");
+    
     this.init = false;
     let mobile_check = function () {
       let nav = (x) => navigator.userAgent.match(x),
@@ -138,7 +134,6 @@ class लिपिलेखिकासहायक {
           this.akSharAH[lang] = result;
           this.k.clear_all_val(true);
           this.k.add_font(lang);
-          this.git(lang);
           if (callback != null) callback();
         },
       });
